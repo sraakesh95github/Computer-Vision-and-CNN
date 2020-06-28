@@ -1,0 +1,19 @@
+Concepts (Viola - Jones algorithm):
+1. Separate feature detection:
+-> Edge
+-> Line
+-> Checker
+
+2. Computation: 
+-> (Average of darker regions) - (Average of lighter regions)
+-> Threshold to be set that defines whether the particular feature has passed or not
+
+3. Use of "Integral Image" for faster computation with a running time of O(1). It is also called as a "Summed Area Table"
+
+4. Time saving - Cascade of Classifiers
+
+5. RGB (face image - portrait preferably) -> Convert to grayscale (light to dark features) -> Edge features indicating the eyes and the cheeks (Uses the cascade of classifiers) -> Search for the next feature line detection (Uses the cascade of classifiers)
+
+6. Disadvantage: A large pre-trained sets of features or datasets is required for the cascade of classifiers
+
+7. OPenCV has pre-trained XML files for Haar Cascade
